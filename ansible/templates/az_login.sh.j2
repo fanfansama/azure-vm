@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# set the environment
+az cloud set --name {{ azure_cloud_map[azure_environment] }}
+
+# login the service principal
+az login \
+--tenant {{ azure_tenant_id }} \
+--service-principal -u {{ azure_client_id }} -p {{ azure_client_secret }}
+
+# set the subscription
+az account set --subscription {{ azure_subscription_id }}
