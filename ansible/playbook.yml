@@ -28,6 +28,8 @@
   - andrelohmann.azurecli
   - andrelohmann.terrahelp
   - andrelohmann.terrahelper
+  - fanfansama.ansible_amazingtools
+
 
   tasks:
   - name: install required packages

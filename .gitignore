@@ -5,11 +5,7 @@
 
 /terraform
 /terraform_state
-/ansible/roles/andrelohmann.azurecli
-/ansible/roles/andrelohmann.root_colored_prompt
-/ansible/roles/andrelohmann.terraform
-/ansible/roles/andrelohmann.terrahelp
-/ansible/roles/andrelohmann.terrahelper
+/ansible/roles/*.*
 /ansible/custom_vars.yml
 /.idea
 /nbproject
