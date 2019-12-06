@@ -29,6 +29,7 @@
   - andrelohmann.terrahelp
   - andrelohmann.terrahelper
   - fanfansama.ansible_amazingtools
+  - fanfansama.ansible_dockerce4vagrant
 
 
   tasks:
@@ -68,6 +69,31 @@
       mode: 0600
     with_items: "{{ private_key_files }}"
 
+########## Azure tools #####
+  - name: create azure folder
+    file:
+      path: /vagrant/azure
+      state: directory
+      owner: vagrant
+      group: vagrant
+      mode: 0775
+
+  - name: link the azure folder to /home/vagrant
+    file:
+      src: /vagrant/azure
+      dest: /home/vagrant/azure
+      owner: vagrant
+      group: vagrant
+      state: link
+
+  - name: clone azure repository
+    git:
+      repo: "{{ azure_scripts_repo }}"
+      dest: /vagrant/azure
+    become: yes
+    become_user: vagrant
+
+########## Terraform #####
   - name: create terraform folder
     file:
       path: /vagrant/terraform
@@ -91,6 +117,7 @@
     become: yes
     become_user: vagrant
 
+########## Terraform State #####
   - name: create terraform state folder
     file:
       path: /vagrant/terraform_state

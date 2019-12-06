@@ -3,6 +3,7 @@ azure_tenant_id: __TENANT_ID__ # Tenant ID = Directory ID
 azure_subscription_id: __SUBSCRIPTION_ID__
 azure_client_id: __CLIENT_ID__ # Client ID = Application ID
 azure_client_secret: __CLIENT_SECRET__ # Client Secret = Application Secret Key
+azure_scripts_repo: '___AZURE_SCRIPTS_REPOSITORY___'
 terraform_template_repo: '__TERRAFORM_TEMPLATE_REPOSITORY__'
 terraform_state_repo: '__TERRAFORM_STATE_REPOSITORY__'
 terraform_state_secret: __TERRAFORM_STATE_SECRET__
