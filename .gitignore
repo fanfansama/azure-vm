@@ -4,7 +4,11 @@
 
 /terraform
 /terraform_state
-/ansible/roles/*.*
+/azure
+/ansible/roles/fanfansama.*
+/ansible/roles/andrelohmann.*
+
+
 /ansible/custom_vars.yml
 /.idea
 /nbproject
