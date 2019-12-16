@@ -30,6 +30,7 @@
   - andrelohmann.terrahelper
   - fanfansama.ansible_amazingtools
   - fanfansama.ansible_dockerce4vagrant
+  - ansible_kubectl
 
 
   tasks:

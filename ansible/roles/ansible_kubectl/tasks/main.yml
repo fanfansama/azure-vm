@@ -1,0 +1,23 @@
+---
+- name: Install required system packages
+  apt:
+    name: '{{ item }}'
+    state: latest
+    update_cache: yes
+  loop: [ 'apt-transport-https']
+
+- name: Add kubernetes-xenial GPG apt Key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Update apt and install docker-ce
+  apt:
+    update_cache: yes
+    name: kubectl
+    state: latest
